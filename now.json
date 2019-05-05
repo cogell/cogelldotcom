@@ -1,4 +1,11 @@
 {
   "version": 2,
-  "alias": ["cogell.com"]
+  "alias": ["cogell.com"],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
+  ]
 }
