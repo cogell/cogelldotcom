@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../src/App.svelte",
+    "../src/global-styles.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n  import GlobalStyles from \"./global-styles.svelte\";\n  import onInterval from \"./hooks/on-interval\";\n\n  const titles = [\"software engineer\", \"human\", \"reader\", \"friend\"];\n  let titleIndex = 0;\n\n  onInterval(() => {\n    titleIndex = (titleIndex + 1) % titles.length;\n  }, 3000);\n</script>\n\n<style>\n  .wrapper {\n    height: 100%;\n  }\n</style>\n\n<GlobalStyles />\n<div class=\"wrapper\">\n  <h1>b. cedric cogell</h1>\n  <p>{titles[titleIndex]}</p>\n</div>\n",
+    "<style>\n  /* flow height thru html document */\n  :global(html),\n  :global(body) {\n    height: 100%;\n  }\n\n  :global(body) {\n    /* system fonts */\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\n      Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\n      \"Segoe UI Symbol\";\n    /* remove default spacing */\n    margin: 0;\n    padding: 0;\n  }\n\n  /* border box sizing  */\n  :global(html) {\n    box-sizing: border-box;\n  }\n  :global(*),\n  :global(*:before),\n  :global(*::after) {\n    box-sizing: inherit;\n  }\n\n  /* default flex  */\n  :global(div) {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n  }\n</style>\n\n\n"
+  ],
+  "names": [],
+  "mappings": "AAaE,QAAQ,cAAC,CAAC,AACR,MAAM,CAAE,IAAI,AACd,CAAC;ACbO,IAAI,AAAC,CACL,IAAI,AAAE,CAAC,AACb,MAAM,CAAE,IAAI,AACd,CAAC,AAEO,IAAI,AAAE,CAAC,AAEb,WAAW,CAAE,aAAa,CAAC,CAAC,kBAAkB,CAAC,CAAC,UAAU,CAAC,CAAC,MAAM,CAAC;MACjE,SAAS,CAAC,CAAC,KAAK,CAAC,CAAC,UAAU,CAAC,CAAC,mBAAmB,CAAC,CAAC,gBAAgB,CAAC;MACpE,iBAAiB,CAEnB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,AACZ,CAAC,AAGO,IAAI,AAAE,CAAC,AACb,UAAU,CAAE,UAAU,AACxB,CAAC,AACO,CAAC,AAAC,CACF,QAAQ,AAAC,CACT,QAAQ,AAAE,CAAC,AACjB,UAAU,CAAE,OAAO,AACrB,CAAC,AAGO,GAAG,AAAE,CAAC,AACZ,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,AACrB,CAAC"
+}
